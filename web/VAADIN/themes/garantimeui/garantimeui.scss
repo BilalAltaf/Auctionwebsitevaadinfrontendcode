@@ -1,0 +1,342 @@
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+
+@mixin garantimeui {
+  @include valo;
+  .v-button.newstyle {
+    border-radius: 4px;
+    background: #ffffff;
+    border: 0;
+    box-shadow: none;
+    color: rgba(103, 5, 22, 0.74);;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 3em;
+    letter-spacing: 0.05em;
+    line-height: 3.15em;
+    padding: 0 2em;
+    text-align: center;
+    font-size: 100%;
+    border: solid 1px #dee0e3;
+    &:hover {
+      background: rgba(103, 5, 22, 0.74);
+      color: #ffffff !important;
+    }
+  }
+  .v-checkbox > input:checked {
+    color: #1d6705;
+  }
+  .v-button.default {
+    border-radius: 4px;
+    &:hover {
+      background: rgba(103, 5, 22, 0.74);
+      color: #ffffff !important;
+    }
+    background: #ffffff;
+    color: rgba(103, 5, 22, 0.74);
+    box-shadow: none;
+    border: solid 1px #dee0e3;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 3em;
+    letter-spacing: 0.05em;
+    line-height: 3.15em;
+    padding: 0 2em;
+    text-align: center;
+    font-size: 100%;
+  }
+  .v-button.Social_website {
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    height: 29px;
+    width: 32px;
+    padding: 0;
+    &:hover {
+      background: rgba(103, 5, 22, 0.74);
+    }
+  }
+
+  .v-button.new {
+    border-radius: 4px;
+    &:hover {
+      background: rgba(103, 5, 22, 0.74);
+      color: #ffffff !important;
+    }
+    background: rgba(255, 255, 255, 0);
+    color: rgba(103, 5, 22, 0.74);
+    box-shadow: none;
+    border: solid 1px #dee0e3;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 3em;
+    letter-spacing: 0.05em;
+    line-height: 3.15em;
+    padding: 0 2em;
+    text-align: center;
+    font-size: 100%;
+  }
+  .v-formlayout {
+    background: rgba(103, 5, 22, 0.74);
+    color: #000000;
+    opacity: 0.8;
+    border: solid 2px black;
+    height: auto;
+
+  }
+  .v-popupview.vis {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-weight: bold;
+    &:hover {
+      color: #1D6705;
+    }
+  }
+  .v-caption.sas {
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  }
+  .v-verticallayout.foo {
+
+    margin-top: -0.8em;
+    background: #464646;
+    width: 100%;
+    padding: 1em 0 0em 0;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    color: #fff;
+  }
+  .v-verticallayout.auctionview {
+    background: rgba(103, 5, 22, 0.74);
+    opacity: 0.8;
+    padding-left: 10em;
+    min-height: 533px;
+  }
+  .v-verticallayout.startview {
+    width: 100%;
+    padding-left: 219px;
+    background: rgba(103, 5, 22, 0.74);
+    opacity: 0.8;
+    height: 33em;
+  }
+  .v-panel.startview{
+
+    background-image: url(image/community-bg.jpg);
+  }
+  .v-panel.-footer-container {
+    position: relative;
+    background: rgba(128, 128, 128, 0.05);
+    border-radius: 4em;
+    display: inline-block;
+    padding: 0.35em 0.75em 0.35em 0.75em;
+    font-size: 1.25em;
+    cursor: default;
+    text-align: center;
+  }
+  .v-label.-footer-copyright {
+    text-align: center;
+    color: rgba(128, 128, 128, 0.75);
+    font-size: 0.8em;
+    cursor: default;
+    color: #fff;
+  }
+  .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-selected {
+    background-image: -webkit-linear-gradient(top, #1D6705 2%, #1D6705 98%);
+    background-image: linear-gradient(to bottom, #1D6705 2%, #1D6705 98%);
+  }
+  .v-label.foo1 {
+    color: #fff;
+    font-size: 1.50em;
+    font-weight: 400;
+    line-height: 1.50em;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 24em;
+
+  }
+  .v-label.foo2 {
+    font-size: 1.25em;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    padding-left: 7em;
+    padding-right: 5em;
+    text-align: center;
+    padding-bottom: 2em;
+  }
+  .v-slot {
+    width: 100%;
+  }
+  .v-menubar.auction_homepage > .v-menubar-menuitem {
+    border: 0px;
+    color: #dfdfdf;
+    background: #464646;
+    font-weight: 300;
+    height: 48px;
+    padding: 0.5em 145px 0.3em 145px;
+    &:hover {
+      background-image: -webkit-linear-gradient(top, rgba(103, 5, 22, 0.74) 2%, rgba(103, 5, 22, 0.74) 98%);
+      background-image: -webkit-linear-gradient(top, rgba(103, 5, 22, 0.35) 2%, rgba(103, 5, 22, 0.35) 98%)
+    }
+  }
+
+
+  .v-menubar.auction_mainpage > .v-menubar-menuitem {
+    border: 0px;
+    color: #dfdfdf;
+    background: #464646;
+    font-weight: 300;
+    height: 48px;
+    padding: 0.5em 76px 0.3em 76px;
+    &:hover {
+      background-image: -webkit-linear-gradient(top, rgba(29, 103, 5, 0.38) 2%, rgba(29, 103, 5, 0.35) 98%);
+      background-image: -webkit-linear-gradient(top, rgba(103, 5, 22, 0.35) 2%, rgba(103, 5, 22, 0.35) 98%)
+    }
+  }
+  .v-menubar-popup .v-menubar-menuitem {
+    display: block;
+    cursor: pointer;
+    line-height: 27px;
+    padding: 0 20px 0 10px;
+    border-radius: 3px;
+    font-weight: 400;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 42px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 42px;
+  }
+  .v-grid-row > th {
+    background-color: white;
+    color: black;
+  }
+  .v-grid-row > td {
+    color: black;
+  }
+  .v-menubar-popup {
+    border: solid 1px #ffffff;
+    margin: 12px 0 0 1px !important;
+  }
+  .v-menubar-popup .v-menubar-menuitem-selected {
+    background: #268716;
+    background-image: -webkit-linear-gradient(top, rgba(29, 103, 5, 0.38) 2%, rgba(29, 103, 5, 0.35) 98%);
+    background-image: -webkit-linear-gradient(top, rgba(29, 103, 5, 0.38) 2%, rgba(29, 103, 5, 0.35) 98%);
+  }
+  .v-menubar > .v-menubar-menuitem-selected {
+    background: #2C9920;
+    background-image: -webkit-linear-gradient(top, rgba(29, 103, 5, 0.38) 2%, rgba(29, 103, 5, 0.35) 98%);
+    background-image: -webkit-linear-gradient(top, rgba(29, 103, 5, 0.38) 2%, rgba(29, 103, 5, 0.35) 98%);
+    -webkit-box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca;
+    box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    z-index: 2;
+  }
+  .v-table {
+    color: #191919;
+
+  }
+
+  .v-table-row-odd {
+    background-color: rgba(103, 5, 22, 0.5);
+  }
+  .v-table-footer table, .v-table-table {
+    border: solid 3px #191919;
+  }
+  .v-table-body table{
+  width: 100%;
+  height: 100%;
+}
+  .v-table-header table
+  {
+    background-color: rgba(103, 5, 22, 0.5);
+    border: solid 4px #191919;
+  }
+
+  .v-grid-row-selected > .v-grid-cell {
+    background-color: #197de1;
+    background: #1D6705;
+    background-image: -webkit-linear-gradient(top, #1D6705 2%, #1D6705 98%);
+    background-image: linear-gradient(to bottom,#1D6705 2%, #1D6705 98%);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+    border-color: black;
+  }
+  .v-label.heading
+  {
+    &:hover {
+      color: rgba(103, 5, 22, 0.74);
+    }
+    font-size: 2.15em;
+    text-align: left;
+    font-weight: 400;
+    color: #000000;
+    line-height: 0.25em;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  .v-link.startview {
+
+    color: white;
+    &:hover {
+      background: #162e47;
+    }
+  }
+  .v-button.startview {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0 0px;
+    height: 25px;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: inherit;
+    -webkit-transition: color 140ms;
+    -moz-transition: color 140ms;
+    transition: color 140ms;
+    color: white;
+    &:hover {
+      background: #162e47;
+    }
+  }
+  .v-caption {
+    color: black;
+  }
+  // Insert your own theme rules here
+}
